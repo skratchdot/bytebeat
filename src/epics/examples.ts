@@ -1,6 +1,7 @@
 import { ActionsObservable, ofType } from 'redux-observable';
 import { Observable } from 'rxjs';
 import { setCodeValue } from '../actions/code';
+import { setCounter } from '../actions/counter';
 import {
   setExampleDropdownVisible,
   SetExampleDropdownVisibleAction,
@@ -18,6 +19,7 @@ export const setSelectedExampleEpic = (
     return Observable.concat([
       setExampleDropdownVisible(false),
       setCodeValue(action.payload.code0),
+      setCounter(0),
       setSampleRate(samplerate)
     ]);
   });
