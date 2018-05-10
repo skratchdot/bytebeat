@@ -15,7 +15,7 @@ export default () => [
   },
   {
     author: 'hadez',
-    code0: 'sin(t>>16)|(t|t>>8)',
+    code0: 'Math.sin(t>>16)|(t|t>>8)',
     title: 'slow chippy bassline',
     source:
       'https://wiki.shackspace.de/doku.php?id=project:algorithmicsoundscapes'
@@ -58,7 +58,7 @@ export default () => [
   },
   {
     author: 'samuirai',
-    code0: '((sin((t%17)*3.1415*0.5)*100)<<t/90)|(sin(t*t*3.1415*0.5)*50)',
+    code0: '((Math.sin((t%17)*3.1415*0.5)*100)<<t/90)|(Math.sin(t*t*3.1415*0.5)*50)',
     title: 'dramatic space aliens',
     source:
       'https://wiki.shackspace.de/doku.php?id=project:algorithmicsoundscapes'

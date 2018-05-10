@@ -7,7 +7,7 @@ export default () => [
     author: 'viznut'
   },
   {
-    code0: '(int)(t/1e7*t*t+t)%127|t>>4|t>>5|t%127+(t>>16)|t',
+    code0: '(t/1e7*t*t+t)%127|t>>4|t>>5|t%127+(t>>16)|t',
     source: 'http://www.youtube.com/watch?v=tCRPUv8V22o',
     title: '2011-10-10',
     author: 'bst'

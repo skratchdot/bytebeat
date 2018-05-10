@@ -23,7 +23,7 @@ import {
   SetSelectedExampleAction
 } from '../actions/examples';
 
-const FIRST_EXAMPLE_INDEX = 29;
+const FIRST_EXAMPLE_INDEX = 0;
 
 type StateProps = {
   analyser: AnalyserData;

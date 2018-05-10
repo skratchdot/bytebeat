@@ -117,7 +117,7 @@ export default () => [
     author: 'harism'
   },
   {
-    code0: 't&(sin(t&t&3)*t>>5)/(t>>3&t>>6)',
+    code0: 't&(Math.sin(t&t&3)*t>>5)/(t>>3&t>>6)',
     source: 'http://pouet.net/topic.php?which=8357&page=9',
     title: '2011-10-04',
     author: 'droid'
@@ -250,19 +250,19 @@ export default () => [
     author: 'viznut'
   },
   {
-    code0: 't>>4|t&DIV((t>>5),(t>>7-(t>>15)&-t>>7-(t>>15)))',
+    code0: 't>>4|t&((t>>5)/(t>>7-(t>>15)&-t>>7-(t>>15)))',
     source: 'http://www.youtube.com/watch?v=tCRPUv8V22o',
     title: '2011-10-10',
     author: 'droid'
   },
   {
-    code0: 'v=(v>>1)+(v>>4)+t*(((t>>16)|(t>>6))&(69&(t>>9)))',
+    code0: 'v=t,(v>>1)+(v>>4)+t*(((t>>16)|(t>>6))&(69&(t>>9)))',
     source: 'http://www.youtube.com/watch?v=qlrs2Vorw2Y',
     title: '2011-09-30',
     author: 'pyryp'
   },
   {
-    code0: '(int)(t/1e7*t*t+t)%127|t>>4|t>>5|t%127+(t>>16)|t',
+    code0: '(t/1e7*t*t+t)%127|t>>4|t>>5|t%127+(t>>16)|t',
     source: 'http://www.youtube.com/watch?v=tCRPUv8V22o',
     title: '2011-10-10',
     author: 'bst'
