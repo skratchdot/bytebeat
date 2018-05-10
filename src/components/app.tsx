@@ -1,12 +1,14 @@
 import { Box, Flex } from 'grid-styled';
 import * as React from 'react';
-import { connect } from 'react-redux';
+import { connect, Dispatch } from 'react-redux';
 import {
   AnalyserData,
   ByteBeatState,
   Code,
   Constants,
   Counter,
+  Example,
+  ExampleState,
   RGBA
 } from '../types';
 import Audio from './audio';
@@ -16,12 +18,25 @@ import CompileStatus from './compile-status';
 import Editor from './editor';
 import Examples from './examples';
 import Header from './header';
+import {
+  setSelectedExample,
+  SetSelectedExampleAction
+} from '../actions/examples';
 
-type Props = {
+const FIRST_EXAMPLE_INDEX = 29;
+
+type StateProps = {
   analyser: AnalyserData;
   code: Code;
   counter: Counter;
+  examples: ExampleState;
 };
+
+type DispatchProps = {
+  onInit: (example: Example) => void;
+};
+
+type Props = StateProps & DispatchProps;
 
 const successFn = (val: number): RGBA => ({
   r: 255,
@@ -38,6 +53,10 @@ const errorFn = (val: number): RGBA => ({
 });
 
 class App extends React.Component<Props> {
+  componentDidMount() {
+    const { examples, onInit } = this.props;
+    onInit(examples.examples[FIRST_EXAMPLE_INDEX]);
+  }
   render() {
     const { analyser, code, counter } = this.props;
     return (
@@ -115,10 +134,19 @@ class App extends React.Component<Props> {
   }
 }
 
-const mapStateToProps = (state: ByteBeatState): Props => ({
+const mapStateToProps = (state: ByteBeatState): StateProps => ({
   analyser: state.analyser,
   code: state.code,
-  counter: state.counter
+  counter: state.counter,
+  examples: state.examples
 });
 
-export default connect(mapStateToProps)(App);
+const mapDispatchToProps = (
+  dispatch: Dispatch<SetSelectedExampleAction>
+): DispatchProps => ({
+  onInit: (example: Example) => {
+    dispatch(setSelectedExample(example));
+  }
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
