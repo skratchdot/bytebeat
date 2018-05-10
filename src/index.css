@@ -9,6 +9,9 @@ body {
   color: white;
   font-family: 'VT323', monospace;
 }
+a {
+  color: white;
+}
 button {
   background: transparent;
   border: 1px solid white;

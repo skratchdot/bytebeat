@@ -16,7 +16,9 @@ class Header extends React.Component {
           style={{ fontSize: '1.3rem', textAlign: 'center' }}
           my={10}
         >
-          ByteBeat v{packageJson.version}
+          <a href="https://github.com/skratchdot/bytebeat">
+            ByteBeat v{packageJson.version}
+          </a>
         </Box>
         <Box width={[1, 1 / 2, 1 / 2, 1 / 4]} my={10}>
           <PlayingControls />
