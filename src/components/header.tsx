@@ -1,11 +1,11 @@
 import { Box, Flex } from 'grid-styled';
 import * as React from 'react';
 import { connect } from 'react-redux';
+import packageJson from '../../package.json';
 import Counter from './counter';
 import PlayingControls from './playing-controls';
 import SampleRateControls from './sample-rate-controls';
 import VolumeControls from './volume-controls';
-import packageJson from '../../package.json';
 
 class Header extends React.Component {
   render() {

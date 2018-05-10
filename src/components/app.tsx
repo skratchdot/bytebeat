@@ -2,8 +2,8 @@ import { Box, Flex } from 'grid-styled';
 import * as React from 'react';
 import { connect } from 'react-redux';
 import {
-  ByteBeatState,
   AnalyserData,
+  ByteBeatState,
   Code,
   Constants,
   Counter,
@@ -12,10 +12,10 @@ import {
 import Audio from './audio';
 import AnalyserChart from './charts/analyser-chart';
 import Square from './charts/square';
+import CompileStatus from './compile-status';
 import Editor from './editor';
 import Examples from './examples';
 import Header from './header';
-import CompileStatus from './compile-status';
 
 type Props = {
   analyser: AnalyserData;

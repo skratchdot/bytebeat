@@ -1,9 +1,9 @@
 import { Box, Flex } from 'grid-styled';
+import humanizeDuration from 'humanize-duration';
 import * as React from 'react';
 import { connect, Dispatch } from 'react-redux';
-import { ByteBeatState, Counter as CounterType } from '../types';
-import humanizeDuration from 'humanize-duration';
 import { setCounter, SetCounterAction } from '../actions/counter';
+import { ByteBeatState, Counter as CounterType } from '../types';
 
 type StateProps = {
   counter: CounterType;
