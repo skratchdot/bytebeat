@@ -87,17 +87,15 @@ class SampleRateControls extends React.Component<Props> {
           <Flex flexDirection="column" alignItems="center">
             <Box>SRate: {sampleRate}</Box>
             <Box>
-              <Flex>
-                <input
-                  type="range"
-                  min="1"
-                  max="44100"
-                  step="1"
-                  value={sampleRate}
-                  onChange={onSetSampleRate}
-                  onInput={onSetSampleRate}
-                />
-              </Flex>
+              <input
+                type="range"
+                min="1"
+                max="44100"
+                step="1"
+                value={sampleRate}
+                onChange={onSetSampleRate}
+                onInput={onSetSampleRate}
+              />
             </Box>
           </Flex>
         </Box>
